@@ -65,11 +65,11 @@ class LinkedList:
         cur_node = self.head_node
         list_as_string = ""
         while cur_node:
-            if type(cur_node.value) is not str:
+            if isinstance(cur_node.value, str):
+                list_as_string += cur_node.key + '\n'
+            else:
                 # cur_node.value is namedtuple here
                 list_as_string += cur_node.stringify_node()
-            else:
-                list_as_string += cur_node.key + '\n'
             cur_node = cur_node.get_next_node()
         return list_as_string
 
