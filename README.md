@@ -45,3 +45,6 @@ search: `'chin'`	results: `'chinese'`  ---->  print all chinese restaurant info
     * For the requirements of this *simple* application, there is no need to store the restaurant data in a hashmap.  It might be slightly faster to use a linked list instead, as there may be unused locations in the hashmap's array that will get searched and waste time.
     * Considering a *real life* application, it makes sense to store the restaurant data in a hashmap so that a user can directly look up restaurant information if they know the name (and another trie tree could be used to suggest names).  This is why I went this route, though this functionality is not implemented.
     * Similarly, storing the restaurant data in a namedtuple created additional work in printing the output for this simple app, but I believe the use of the namedtuple would be appropriate for a more robust application.
+
+3. File Organization
+   * All data structure classes are in the same file, which feels sloppy.  I ran into a circular logic problem with import statements that I didn't feel like figuring out.  Partially due to using class inheritance.
