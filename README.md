@@ -20,15 +20,16 @@ search: `'chin'`	results: `'chinese'`  ---->  print all chinese restaurant info
 1. Trie Tree
     * Comprised of all `cuisines`. Validates and suggests user search.
   
-2a. Nodes & Linked Lists
-    * Linked list used to organize restaurants by cuisine. This `CuisineList` is made of `CuisineNode`s.
-    * `CuisineNode.key` holds `cuisine_type`, a string.
-    * `CuisineNode.value` holds a hashmap of all restaurants of `cuisine_type`.
-2b. HashMap with separate chaining for collision resolution
-    * HashMap's array modeled with Python built-in list.
-    * Each array holds instance of a Linked list, allowing nodes to be added if a collision occurs. This `LinkedList` is made of `Node`s.
-    * `Node.key` holds restaurant's name, a string.
-    * `Node.value` holds restaurant data in `r`, an instance of collections.namedtuple.
+2. Nodes & Linked Lists
+     * Linked list used to organize restaurants by cuisine. This `CuisineList` is made of `CuisineNode`s.
+     * `CuisineNode.key` holds `cuisine_type`, a string.
+     * `CuisineNode.value` holds a hashmap of all restaurants of `cuisine_type`.
+     
+3. HashMap with separate chaining for collision resolution
+     * HashMap's array modeled with Python built-in list.
+     * Each array holds instance of a Linked list, allowing nodes to be added if a collision occurs. This `LinkedList` is made of `Node`s.
+     * `Node.key` holds restaurant's name, a string.
+     * `Node.value` holds restaurant data in `r`, an instance of collections.namedtuple.
 
 #### Analysis
 1. Search Runtime
